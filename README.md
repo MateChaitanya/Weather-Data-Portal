@@ -48,6 +48,36 @@ This project demonstrates **backend system security, authentication with LDAP, A
 
 ---
 
+## ⚙️ How It Works
+
+1. User visits the portal and enters login credentials.  
+2. Backend validates credentials against **LDAP directory**.  
+3. On success → user is authenticated, and session is secured via **SSL/TLS**.  
+4. User requests weather data (hourly/daily).  
+5. Backend retrieves data from **MySQL database** and serves via APIs.  
+6. Data is displayed on the frontend UI.  
+7. All network requests flow securely: **Browser → Apache → Tomcat → Spring Boot**.  
+
+---
+
+## 📊 Example Use Case
+
+If user searches **Pune**, the backend:  
+- Looks up **city ID** from City Table.  
+- Fetches **daily weather facts** for that city.  
+- Retrieves **astronomy details** (sunrise, sunset).  
+- Returns JSON response to frontend for display.  
+
+---
+
+## 🔑 Key Learning Outcomes
+
+- Implementing **LDAP-based authentication** in enterprise applications.  
+- Setting up **SSL/TLS certificates** for secure browser communication.  
+- Configuring **Apache as reverse proxy** with Tomcat for production-grade deployment.  
+- Structuring relational databases for weather-based applications.  
+- Hands-on with **Spring Boot, Hibernate, and SQL queries**.
+
 ## 📂 Project Structure
 
 ```bash
@@ -61,3 +91,4 @@ Weather-Data-Portal/
 ├── frontend/                # Frontend code (UI for login + weather view)
 │
 ├── README.md                # Project documentation
+
